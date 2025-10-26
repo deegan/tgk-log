@@ -1,0 +1,10 @@
+#define NO_RESOLVE 0
+#define RESOLVE 1
+#define IP_SIZE 17
+#define HW_SIZE 20
+#define DEVICE_SIZE 6
+#define PATH_SIZE 256
+#define BUFFER_SIZE 2000
+#define HOST_SIZE 256
+#define DUMP_SIZE 80
+#define VERSION 2.5  
