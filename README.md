@@ -25,50 +25,50 @@ Compilers have ranged from gcc 2.7.2.3 to pgcc 2.91.60.
 
 Simple explanation of the config file(/etc/tgk-log):
 
-resolve on/off			
- Toggles if tgk-log should resolve the ip's it logs into hostnames 
- default is off
+###### resolve on/off			
+Toggles if tgk-log should resolve the ip's it logs into hostnames 
+default is off
 
-log-udp/tcp/icmp on/off
- You should be able to figure out what this is on your own.
+###### log-udp/tcp/icmp on/off
+You should be able to figure out what this is on your own.
 
-udp/icmp/tcplogfile /var/log/tgk.log
- *required* Pretty obvious what this is isn't it? 
+###### udp/icmp/tcplogfile /var/log/tgk.log
+*required* Pretty obvious what this is isn't it? 
 
-promisc on/off
-  Toggles if tgk-log should put the NIC into promiscous mode. If you want
-  to be able to log traffic going over the internal network only you have to
-  set this to on.
+###### promisc on/off
+Toggles if tgk-log should put the NIC into promiscous mode. If you want
+to be able to log traffic going over the internal network only you have to
+set this to on.
   
-device ethX
- The device tgk-log should bind to. for example eth0, eth1 etc etc.
+###### device ethX
+The device tgk-log should bind to. for example eth0, eth1 etc etc.
 
-log_all yes/no
- Wheter to log everything that passes by the "device" interface, if set to no
- the following options will apply. Else no check's will be done on
- source&destination, this is probably what you want if not using a ip-masq
- firewall 
+###### log_all yes/no
+Wheter to log everything that passes by the "device" interface, if set to no
+the following options will apply. Else no check's will be done on
+source&destination, this is probably what you want if not using a ip-masq
+firewall 
     
 **THE FOLLOWING OPTION ONLY APPLIES IF log_all IS no**
 
-log_intranet on/off
- Toggles if trafic that has a source and destination inside the internal
- network should be logged, default is off
+###### log_intranet on/off
+Toggles if trafic that has a source and destination inside the internal
+network should be logged, default is off
 
-log_outside_to_intranet on/off
- Whetver tgk-log should log connections made from hosts outside the intranet
- to the internal net. If you'r using ip-masquerading this serves no purpose
- as you probably understand, but if activated on a masquerading gateway it
- will give you double logs of the connection. internal:port->external:port 
- and external:port->internal:port.
+###### log_outside_to_intranet on/off
+Whetver tgk-log should log connections made from hosts outside the intranet
+to the internal net. If you'r using ip-masquerading this serves no purpose
+as you probably understand, but if activated on a masquerading gateway it
+will give you double logs of the connection. internal:port->external:port 
+and external:port->internal:port.
 
-net_class 8/16/24
-  What netmask the internal network has, 16 or 24, i.e class A,B or C.
-  default is 24
+###### net_class 8/16/24
+What netmask the internal network has, 16 or 24, i.e class A,B or C.
+default is 24
 
-intranet <internal network adress>
-  Internal network adress, *required* if log_all is NO. for example 192.168.0.0
-  or 172.16.0.0
+###### intranet <internal network adress>
+Internal network adress, *required* if log_all is NO. for example 192.168.0.0
+or 172.16.0.0
 
 <fire@c5.hakker.com>
 http://c5.hakker.com  
