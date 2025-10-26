@@ -1,3 +1,12 @@
+# General information
+
+This code was not written by me. It has been updated to support newer kernel version than the ones mentioned.
+
+Current version: tgk-log-2.5
+Based on: tgk-log-2.4
+
+# Original README from the developer.
+
 *NOTICE*
 
 If you are planning to run tgk-log on a masquerading(NAT) gateway, then
